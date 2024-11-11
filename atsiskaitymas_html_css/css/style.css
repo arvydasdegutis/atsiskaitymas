@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.banner {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    #000 0.13%,
+    #000 0.14%,
+    rgba(0, 0, 0, 0) 99.56%
+  );
+}
+.banner__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 10rem;
+}
+
+.banner__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav :hover { 
+  color: #7891f1;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #252b42;
+}
+
+
+
+@media (max-width: 768px) {
+  .banner__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #252b42;
+    gap: 1rem;
+  }
+
+  .banner__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #252b42;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 100%;
+    color: #fff;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav ul li a :hover { 
+    color: #7891f1;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+}
+
+.welcome {
+  position: relative;
+  padding-left: 10rem;
+  padding-top: 20rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+.welcome__button {
+  display: flex;
+  flex-direction: flex-start;
+  gap: 1rem;
+}
+
+.welcome__button--one {
+  border-radius: 37px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; 
+  letter-spacing: 0.2px;
+  color: var(--light-text-color, #fff);
+text-align: center;
+padding: 1rem 2.25rem;
+}
+
+.welcome__button--one:hover {
+  border-radius: 37px;
+  background: var(--primary-color, #23a6f0); 
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; 
+  letter-spacing: 0.2px;
+  color: var(--light-text-color, #FFF);
+text-align: center;
+padding: 1rem 2.25rem;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    position: relative;
+    padding-left: 5rem;
+    padding-top: 20rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    font-size: 1rem;
+  }
+ 
+  
+  .welcome__button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome__button--one {
+    border-radius: 37px;
+    background-color: transparent;
+    border: 1px solid #23a6f0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; 
+    letter-spacing: 0.2px;
+    color: var(--light-text-color, #23a6f0);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  }
+
+  .welcome__button--one:hover {
+    border-radius: 37px;
+    background: var(--primary-color, #23a6f0); 
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; 
+    letter-spacing: 0.2px;
+    color: var(--light-text-color, #FFF);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  }
+}
+
+
+
+
+.services {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  background-color: #252B42;
+}
+
+.service__card {
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  max-width: 200px;
+}
+
+
+
+.service__card picture {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.service__card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service__card {
+    width: 80%;
+    max-width: 100%;
+ 
+  }
+}
+
+
+.clients {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #8EC2F2;
+  font-family: "Dancing script";
+}
+
+.clients h2 {
+  font-size: 4rem;
+  color: #FFF; 
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: #FFF;
+  font-size: 2rem;
+}
+
+
+.clients__cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.client__card {
+  padding: 1.5rem;
+  text-align: left;
+  background-color: #FFF;
+
+}
+
+.client__card h3 {
+  color: #252B42;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.client__card p {
+  color: #737373;
+  font-size: 2rem;
+}
+
+.client__card--rating {
+  background-image: url(../images/rating.png);
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .clients__cards {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (min-width: 769px)  {
+  .clients__cards {
+    grid-template-columns: 1fr 1fr; 
+  }
+  .client__card--photo {
+    background-image: url(../images/client_first.png);
+    background-repeat: no-repeat;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+.contact__us { 
+  background: url(../images/background_contact.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh; 
+}
+
+.contact { 
+  padding-left: 10rem;
+}
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 60%;
+
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea, 
+.contact form select {
+  width: 100%;
+  padding: 1em;
+  border: solid 1px #627EDC;
+  border-radius: 4px;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  background: #23A6F0;
+  border: 0;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+.contact form button:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .contact form {
+    display: flex;
+    grid-template-columns: 1fr ;
+    flex-direction: column;
+  }
+
+  .contact {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.consulting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  gap: 1rem;
+}
+
+.consulting__content {
+  flex: 1;
+  max-width: 600px;
+  color: #333;
+}
+
+
+
+.highlighted__text {
+  font-weight: bold;
+  color: #252B42;
+  margin-bottom: 1rem;
+}
+
+
+.consulting__buttons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 8rem;
+  height: 5rem; 
+  }
+
+  .consulting__button {
+    padding: 1.5rem 1rem;
+    border: none;
+    background-color: #23A6F0;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  .consulting__button:hover {
+    background-color: #0056b3;
+  }
+
+@media (max-width: 768px) {
+  .consulting {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .consulting__content,
+  .consulting__images {
+    max-width: 90%;
+  }
+
+  .consulting__imagesimages {
+    margin-top: 2rem;
+  }
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .services,
+  .client__cards,
+  .consulting {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .client__card {
+    width: 80%;
+  }
+
+  .consulting {
+    flex-direction: column;
+  }
+
+}

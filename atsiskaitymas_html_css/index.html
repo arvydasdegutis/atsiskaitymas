@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Cargo Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="banner">
+      <section class="banner__top">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/background_small.png"
+          />
+          <source media="(max-width: 1024px)" srcset="images/background.png" />
+          <img
+            src="images/background.png"
+            alt="Background Image"
+            class="banner__background"
+          />
+        </picture>
+        <div class="logo">BrandName</div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="images/hamburger.svg" />
+        </div>
+      </section>
+
+      <figure class="welcome">
+        <h1>We Ensure A Best</h1>
+        <h1>Insurance Service</h1>
+        <p>We know how large objects will act, but things on a small scale</p>
+        <figcaption class="welcome__button">
+        <button class="welcome__button--one">Get Quote Now</button>
+        <button class="welcome__button--one">Learn More</button></figcaption>
+      </figure>
+    </header>
+
+    <section class="services">
+      <article class="service__card">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/icon_mobile.svg" />
+          <source media="(max-width: 1024px)" srcset="images/icon_1.svg" />
+          <img src="images/icon_1.svg" alt="Peace of Mind" />
+        </picture>
+        <h3>Peace of Mind</h3>
+        <p>So it really behaves like neither. Now we given up.</p>
+      </article>
+      <article class="service__card">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/icon_mobile.svg" />
+          <source media="(max-width: 1024px)" srcset="images/icon_2.svg" />
+          <img src="images/icon_2.svg" alt="Set For Life" />
+        </picture>
+        <h3>Set For Life</h3>
+        <p>They were used to create the machines that launched</p>
+      </article>
+      <article class="service__card">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/icon_mobile.svg" />
+          <source media="(max-width: 1024px)" srcset="images/icon_3.svg" />
+          <img src="images/icon_3.svg" alt="100% Satisfaction" />
+        </picture>
+        <h3>100% Satisfaction</h3>
+        <p>So it really nehaves like neither. Now we have given up.</p>
+      </article>
+    </section>
+
+    <section class="clients">
+      <h2>What Clients Say</h2>
+      <p class="description">
+        Problems trying to resolve the conflict betwen the two majo realms of
+        Classical physiccs: Newtonian mechanics
+      </p>
+
+      <article class="clients__cards">
+        <figure class="client__card">
+          <img class="client__card--photo">
+          <h3>Regina Miles</h3>
+
+          <p>Designer</p>
+          <figcaption class="client__card--rating"></figcaption>
+          <p>
+            This proved to be impossible using the traditional concepts of space
+            and time. Einstein developed a new view of time first and then
+            space. This proved to be impossible using the traditional concepts
+            of space and time. Einstein developed a new view of time first and
+            then space.
+          </p>
+        </figure>
+        <figure class="client__card">
+          <img class="client__card--photo">
+          <h3>Regina Miles</h3>
+          <p>Designer</p>
+          <figcaption class="client__card--rating"></figcaption>
+          <p>
+            This proved to be impossible using the traditional concepts of space
+            and time. Einstein developed a new view of time first and then
+            space. This proved to be impossible using the traditional concepts
+            of space and time. Einstein developed a new view of time first and
+            then space.
+          </p>
+        </figure>
+      </article>
+    </section>
+
+
+<main class="contact__us">
+	<article class="contact">
+    <h3>E-mail Us</h3>
+
+    <form id="contact__form">
+
+      <p>
+
+        <input type="text" name="name" placeholder="Full name *" >
+      </p>
+
+      <p>
+        <input type="email" name="email" placeholder="email">
+      </p>
+      <p>
+        <select id="select" name="select" placeholder="Pleace select"  >
+          <option value="">Select an option</option>
+      </select>
+      </p>
+      <p>
+        <select type="text" name="availability" placeholder="4:00 Available" >
+          <option value="">4:00 PM</option></select>
+      </p>
+
+
+
+      <p class="full">
+        <label>Message</label>
+        <textarea name="message" rows="5" placeholder="Message"></textarea>
+      </p>
+
+      <p class="full">
+        <button type="submit">Book Appointment</button>
+      </p>
+
+    </form></article></main>
+
+
+
+
+    <section class="consulting">
+      <figure class="consulting-content">
+        <h2>Why Us</h2>
+        <p class="highlighted-text">Consulting Agency For Your Business        </p>
+        <p>
+          the quick fox jumps over the lazy dog
+        </p>
+      </figure>
+
+      <figure class="consulting__buttons">
+      <button class="consulting__button">Contact us </button></figure>
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+      <p>
+        &copy; Made With Love By Figmaland All Right Reserved 
+      </p>
+    </footer>
+  </body>
+</html>
